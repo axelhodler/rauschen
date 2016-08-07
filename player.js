@@ -12,16 +12,11 @@ var audioOptions = {
     mode: lame.STEREO
 };
 
-
 var song = 'rain-and-thunder.mp3';
 
-function playStream(input, options) {
+function playStream(input) {
     var decoder = lame.Decoder();
-    options = options || {};
     var v = new volume();
-    if (options.volume) {
-        v.setVolume(options.volume);
-    }
     var speaker = new Speaker(audioOptions);
     speaker.on('finish', function() {
         start();
@@ -36,7 +31,4 @@ function playStream(input, options) {
 
 var inputStream = fs.createReadStream(song);
 
-
-playStream(inputStream, {
-    volume: 0.5
-});
+playStream(inputStream);
