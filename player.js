@@ -1,6 +1,5 @@
 // taken from https://gist.github.com/revolunet/f194a6b4cbbd10a304f9 and modified
 
-var async = require('async');
 var lame = require('lame');
 var fs = require('fs');
 var Speaker = require('speaker');
