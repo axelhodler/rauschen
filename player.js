@@ -24,10 +24,7 @@ function playStream(input, options) {
     }
     var speaker = new Speaker(audioOptions);
     speaker.on('finish', function() {
-        if (options.loop) {
-            // i want to restart here
-            start();
-        }
+        start();
     });
     function start() {
         v.pipe(speaker);
@@ -41,6 +38,5 @@ var inputStream = fs.createReadStream(song);
 
 
 playStream(inputStream, {
-    volume: 0.5,
-    loop: true
+    volume: 0.5
 });
