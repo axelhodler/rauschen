@@ -25,14 +25,11 @@ function playStream(input, options) {
     var speaker = new Speaker(audioOptions);
     speaker.on('finish', function() {
         if (options.loop) {
-            console.log('loop');
             // i want to restart here
             start();
         }
     });
     function start() {
-        //input.pos = 0;
-        console.dir(input);
         v.pipe(speaker);
         decoder.pipe(v);
         input.pipe(decoder);
