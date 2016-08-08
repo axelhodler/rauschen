@@ -1,0 +1,11 @@
+{
+  "name": "rauschen",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "lame": "^1.2.4",
+    "pcm-volume": "^1.0.0",
+    "speaker": "^0.3.0"
+  }
+}
